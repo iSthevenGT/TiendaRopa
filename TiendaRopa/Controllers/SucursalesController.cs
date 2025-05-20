@@ -2,29 +2,37 @@
 using TiendaRopa.Clases;
 using TiendaRopa.Models;
 
-public class SucursalesController : ApiController
+namespace TiendaRopa.Controllers
 {
-    [HttpPost]
-    [Route("insertar")]
-    public IHttpActionResult Insertar(Sucursal sucursal)
+    [Authorize]
+    [RoutePrefix("api/sucursales")]
+    public class SucursalesController : ApiController
     {
-        var cls = new clsSucursal { sucursal = sucursal };
-        return Ok(cls.Insertar());
-    }
+        
+        [HttpPost]
+        [Route("insertar")]
+        public IHttpActionResult Insertar(Sucursal sucursal)
+        {
+            var cls = new clsSucursal { sucursal = sucursal };
+            return Ok(cls.Insertar());
+        }
 
-    [HttpGet]
-    [Route("consultar")]
-    public IHttpActionResult Consultar(int id)
-    {
-        var cls = new clsSucursal();
-        return Ok(cls.Consultar(id));
-    }
+        
+        [HttpGet]
+        [Route("consultar")]
+        public IHttpActionResult Consultar(int id)
+        {
+            var cls = new clsSucursal();
+            return Ok(cls.Consultar(id));
+        }
 
-    [HttpGet]
-    [Route("consultarTodos")]
-    public IHttpActionResult ConsultarTodos()
-    {
-        var cls = new clsSucursal();
-        return Ok(cls.ConsultarTodos());
+        
+        [HttpGet]
+        [Route("consultarTodos")]
+        public IHttpActionResult ConsultarTodos()
+        {
+            var cls = new clsSucursal();
+            return Ok(cls.ConsultarTodos());
+        }
     }
 }

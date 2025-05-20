@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using TiendaRopa.Clases;
 
 namespace TiendaRopa
 {
@@ -10,7 +11,7 @@ namespace TiendaRopa
         public static void Register(HttpConfiguration config)
         {
             // Configuración y servicios de Web API
-
+            config.MessageHandlers.Add(new TokenValidationHandler());
             // Rutas de Web API
             config.MapHttpAttributeRoutes();
 

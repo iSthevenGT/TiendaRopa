@@ -4,8 +4,10 @@ using TiendaRopa.Models;
 
 namespace TiendaRopa.Controllers
 {
+    [RoutePrefix("api/productos")]
     public class ProductosController : ApiController
     {
+        
         [HttpPost]
         [Route("insertar")]
         public IHttpActionResult Insertar(Producto producto)
@@ -14,6 +16,7 @@ namespace TiendaRopa.Controllers
             return Ok(cls.Insertar());
         }
 
+        
         [HttpPut]
         [Route("actualizar")]
         public IHttpActionResult Actualizar(Producto producto)
@@ -22,6 +25,7 @@ namespace TiendaRopa.Controllers
             return Ok(cls.Actualizar());
         }
 
+        
         [HttpGet]
         [Route("consultar")]
         public IHttpActionResult Consultar(int id)
@@ -30,6 +34,7 @@ namespace TiendaRopa.Controllers
             return Ok(cls.Consultar(id));
         }
 
+        
         [HttpGet]
         [Route("consultarTodos")]
         public IHttpActionResult ConsultarTodos()
@@ -38,6 +43,7 @@ namespace TiendaRopa.Controllers
             return Ok(cls.ConsultarTodos());
         }
 
+        
         [HttpDelete]
         [Route("eliminar")]
         public IHttpActionResult Eliminar(int id)

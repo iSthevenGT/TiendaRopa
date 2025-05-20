@@ -5,9 +5,11 @@ using TiendaRopa.Clases;
 
 namespace TiendaRopa.Controllers
 {
-    [RoutePrefix("uploadFiles")]
+    [Authorize]
+    [RoutePrefix("api/uploadFiles")]
     public class UploadFilesController : ApiController
     {
+        
         [HttpPost]
         [Route("subir")]
         public async Task<HttpResponseMessage> GrabarArchivo(HttpRequestMessage Request, string Datos, string Proceso)
