@@ -11,7 +11,8 @@ namespace TiendaRopa.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using Newtonsoft.Json;
+
     public partial class PedidoProveedor
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -26,6 +27,7 @@ namespace TiendaRopa.Models
         public Nullable<int> IdSucursal { get; set; }
         public string Estado { get; set; }
     
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DetallePedidoProveedor> DetallePedidoProveedors { get; set; }
         public virtual Proveedor Proveedor { get; set; }

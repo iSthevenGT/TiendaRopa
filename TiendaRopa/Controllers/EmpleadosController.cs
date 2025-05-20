@@ -4,7 +4,6 @@ using TiendaRopa.Models;
 
 namespace TiendaRopa.Controllers
 {
-    [Authorize]
     [RoutePrefix("api/empleados")]
     public class EmpleadosController : ApiController
     {
