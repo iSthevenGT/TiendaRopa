@@ -8,6 +8,7 @@ namespace TiendaRopa.Clases
 {
     public class clsCategoria
     {
+
         private DBTiendaRopaEntities DBTienda = new DBTiendaRopaEntities();
 
         public Categoria categoria { get; set; }
@@ -49,7 +50,6 @@ namespace TiendaRopa.Clases
             DBTienda.SaveChanges();
             return "Categoria eliminada con exito";
         }
-
 
         public string Actualizar()
         {
