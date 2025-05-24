@@ -215,6 +215,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Clases\clsCategoria.cs" />
     <Compile Include="Clases\clsCliente.cs" />
     <Compile Include="Clases\clsCypher.cs" />
     <Compile Include="Clases\clsDevolucion.cs" />
@@ -231,6 +232,7 @@
     <Compile Include="Clases\clsVenta.cs" />
     <Compile Include="Clases\TokenGenerator.cs" />
     <Compile Include="Clases\TokenValidationHandler.cs" />
+    <Compile Include="Controllers\CategoriasController.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\DevolucionesController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />

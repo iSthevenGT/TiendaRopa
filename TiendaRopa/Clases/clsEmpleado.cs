@@ -27,8 +27,18 @@ namespace TiendaRopa.Clases
         public string Actualizar()
         {
             var emp = Consultar(empleado.IdEmpleado);
-            if (emp == null) return "Empleado no encontrado";
-            DBTienda.Entry(empleado).State = System.Data.Entity.EntityState.Modified;
+            if (emp == null)
+            {
+                return "Empleado no encontrado";
+            }
+
+            emp.Nombre = empleado.Nombre;
+            emp.Apellido = empleado.Apellido;
+            emp.Documento = empleado.Documento;
+            emp.Telefono = empleado.Telefono;
+            emp.Email = empleado.Email;
+            emp.Cargo = empleado.Cargo;
+            emp.IdSucursal = empleado.IdSucursal;
             DBTienda.SaveChanges();
             return "Empleado actualizado correctamente";
         }
